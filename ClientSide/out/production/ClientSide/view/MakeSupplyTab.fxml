@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tabController.MakeSuppliesTabController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="403.0" minHeight="10.0" prefHeight="400.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="mainTable" prefHeight="200.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn fx:id="productIDCol" prefWidth="104.0" text="Код товара" />
+          <TableColumn fx:id="productNameCol" prefWidth="281.0" text="Наименование" />
+            <TableColumn fx:id="productGroupCol" prefWidth="255.0" text="Группа" />
+            <TableColumn fx:id="productCostCol" prefWidth="120.0" text="Цена" />
+            <TableColumn fx:id="productAmountCol" prefWidth="118.0" text="Количество" />
+            <TableColumn fx:id="productSummaryCol" prefWidth="121.0" text="Сумма" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <TextField fx:id="totalCostField" editable="false" layoutX="878.0" layoutY="14.0" prefHeight="27.0" prefWidth="108.0" />
+            <Label layoutX="826.0" layoutY="19.0" text="Итого:" />
+            <ChoiceBox fx:id="contractorChoiceBox" layoutX="350.0" layoutY="36.0" prefWidth="150.0" />
+            <Label fx:id="contractorTypeLabel" layoutX="259.0" layoutY="41.0" text="Поставщик:" />
+            <Button fx:id="confirmButton" disable="true" layoutX="541.0" layoutY="36.0" mnemonicParsing="false" onAction="#confirmAction" text="Оформить" />
+            <Group layoutX="14.0" layoutY="14.0">
+               <children>
+                  <Button fx:id="addProductButton" mnemonicParsing="false" onAction="#addProduct" text="Добавить" />
+                  <Button fx:id="deleteProductButton" disable="true" layoutX="97.0" mnemonicParsing="false" onAction="#deleteProduct" text="Удалить" />
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

@@ -1,0 +1,10 @@
+package common.util.request;
+
+public enum Command
+{
+    LOGIN, REGISTER, QUIT,
+    GET_SUPPLIES, GET_SALES, GET_PRODUCTS, GET_CONTRACTORS, GET_STORAGE,
+    ADD, ADD_TO_SUPPLIES, ADD_TO_SALES,
+    REMOVE, REMOVE_STATS,
+    UPDATE;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.screenController.LoginScreenController">
+   <children>
+      <Pane fx:id="errorPane" layoutX="101.0" layoutY="116.0" prefHeight="140.0" prefWidth="204.0" style="-fx-background-color: rgb(236,78,74); -fx-background-radius: 5;" visible="false">
+         <children>
+            <Text fill="#eeeeee" layoutX="7.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Неправильный email или пароль. Попробуйте еще раз." wrappingWidth="191.2446746826172">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+         </children>
+      </Pane>
+      <TextField fx:id="loginField" layoutX="107.0" layoutY="184.0" onKeyTyped="#loginChanged" promptText="Логин">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button fx:id="loginButton" layoutX="166.0" layoutY="269.0" mnemonicParsing="false" onAction="#loginButtonAction" text="Войти">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Hyperlink fx:id="signUpButton" layoutX="219.0" layoutY="464.0" onAction="#signUpButtonAction" text="Нет учетной записи?">
+         <font>
+            <Font size="15.0" />
+         </font></Hyperlink>
+      <PasswordField fx:id="passwordField" layoutX="107.0" layoutY="221.0" onKeyTyped="#passwordChanged" promptText="Пароль">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <Pane fx:id="approvePane" prefHeight="38.0" prefWidth="400.0" style="-fx-background-color: rgb(70, 193, 42)rgb(70, 193, 42);" visible="false">
+         <children>
+            <Text fill="#eeeeee" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

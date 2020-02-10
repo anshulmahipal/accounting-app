@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tabController.SuppliesTabController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.0" minWidth="10.0" prefWidth="444.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="649.0" minWidth="10.0" prefWidth="556.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="mainTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="supplyIDCol" prefWidth="70.9867057800293" text="Код поставки" />
+          <TableColumn fx:id="contractorNameCol" prefWidth="155.0133285522461" text="Поставщик" />
+            <TableColumn fx:id="supplyDateCol" prefWidth="131.6383056640625" text="Дата поставки" />
+            <TableColumn fx:id="supplyTotalCol" prefWidth="85.720703125" text="Итого" />
+        </columns>
+      </TableView>
+      <GridPane GridPane.columnIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="416.0" minHeight="10.0" prefHeight="389.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="productsTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="productIDCol" prefWidth="84.07183837890625" text="Код товара" />
+                <TableColumn fx:id="productNameCol" prefWidth="204.55242919921875" text="Наименование товара" />
+                  <TableColumn fx:id="productAmountCol" minWidth="0.0" prefWidth="106.89959716796875" text="Количество" />
+                  <TableColumn fx:id="productCostCol" minWidth="0.0" prefWidth="70.10052490234375" text="Цена" />
+                  <TableColumn fx:id="productSummaryCol" maxWidth="300.0" prefWidth="88.99407958984375" text="Сумма" />
+              </columns>
+            </TableView>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <DatePicker fx:id="minDate" editable="false" layoutX="60.0" layoutY="20.0" />
+                  <DatePicker fx:id="maxDate" editable="false" layoutX="60.0" layoutY="65.0" />
+                  <Label layoutX="30.0" layoutY="25.0" text="C:" />
+                  <Label layoutX="30.0" layoutY="70.0" text="По:" />
+                  <ChoiceBox fx:id="contractorChoiceBox" layoutX="381.0" layoutY="20.0" prefWidth="150.0" />
+                  <Label fx:id="contractorLabel" layoutX="289.0" layoutY="25.0" text="Поставщик:" />
+                  <Button fx:id="clearFilters" layoutX="296.0" layoutY="65.0" mnemonicParsing="false" text="Сбросить фильтры" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

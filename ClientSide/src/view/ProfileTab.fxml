@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" prefHeight="500.0" prefWidth="1000.0" stylesheets="@NavigationBarStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tabController.ProfileTabController">
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="1000.0">
+         <children>
+            <Group fx:id="settingsGroup" disable="true" layoutX="53.0" layoutY="40.0" visible="false">
+               <children>
+                  <Group>
+                     <children>
+                        <TextField fx:id="loginField" layoutY="20.0" promptText="Логин">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Group layoutY="67.0">
+                           <children>
+                              <PasswordField fx:id="newPassword" layoutY="61.0" promptText="Новый пароль">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <PasswordField fx:id="repeatNewPassword" layoutY="99.0" promptText="Повторите пароль">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <PasswordField fx:id="currentPassword" layoutY="22.0" promptText="Текущий пароль">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <Label text="Пароль:" />
+                           </children>
+                        </Group>
+                        <Label text="Почта:" />
+                     </children>
+                  </Group>
+                  <Group layoutX="256.0">
+                     <children>
+                        <Label text="Надбавка %:" />
+                        <Label layoutY="67.0" text="НДС %:" />
+                        <TextField fx:id="adding" layoutY="20.0" promptText="Надбавка">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tax" layoutY="89.0" promptText="НДС">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Group fx:id="generalGroup" disable="true" layoutX="59.0" layoutY="51.0">
+               <children>
+                  <Group>
+                     <children>
+                        <TextField fx:id="surnameField" layoutY="20.0" promptText="Фамилия">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="nameField" layoutY="83.0" promptText="Имя">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="patronymicField" layoutY="144.0" promptText="Отчетсво">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Фамилия:" />
+                        <Label layoutY="62.0" text="Имя:" />
+                        <Label layoutX="-2.0" layoutY="124.0" text="Отчество:" />
+                     </children>
+                  </Group>
+                  <Group layoutX="246.0">
+                     <children>
+                        <TextField fx:id="workplaceField" layoutY="20.0" promptText="Место работы">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="cityField" layoutY="83.0" promptText="Город">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="phonefField" layoutY="144.0" promptText="Телефон">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Место работы:" />
+                        <Label layoutY="62.0" text="Город" />
+                        <Label layoutY="124.0" text="Телефон:" />
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Button fx:id="editGeneralButton" layoutX="57.0" layoutY="250.0" mnemonicParsing="false" onAction="#editGeneralAction" text="Изменить" />
+            <Button fx:id="editSettingsButton" layoutX="57.0" layoutY="250.0" mnemonicParsing="false" onAction="#editSettingsAction" text="Изменить" visible="false" />
+            <Button fx:id="cancelButton" layoutX="161.0" layoutY="250.0" mnemonicParsing="false" onAction="#cancelAction" text="Отмена" visible="false" />
+            <Group fx:id="deleteGroup" layoutX="650.0" layoutY="421.0" visible="false">
+               <children>
+                  <Button fx:id="deleteAccountButton" layoutX="31.0" layoutY="38.0" mnemonicParsing="false" onAction="#deleteAccountAction" text="Удалить аккаунт" />
+                  <Button fx:id="dropStatsButton" mnemonicParsing="false" onAction="#dropStatsAction" text="Сбросить статистику" />
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="450.0" prefWidth="180.0" styleClass="navigation-sidebar" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="generalButton" mnemonicParsing="false" onAction="#generalAction" prefHeight="60.0" prefWidth="180.0" styleClass="navigation-button" text="Общее">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#settingsAction" prefHeight="60.0" prefWidth="180.0" styleClass="navigation-button" text="Настройки">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="10.0" layoutY="59.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="60.0" prefWidth="180.0" styleClass="navigation-button" text="Выйти">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children></VBox>
+   </left>
+</BorderPane>

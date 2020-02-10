@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.screenController.AddProductDialogController">
+   <children>
+      <TextField fx:id="productNameField" layoutX="117.0" layoutY="74.0" promptText="Имя товара" />
+      <ChoiceBox fx:id="productGroupChoice" layoutX="117.0" layoutY="139.0" prefHeight="27.0" prefWidth="167.0" />
+      <TextField fx:id="productCostField" layoutX="117.0" layoutY="206.0" promptText="Цена товара" />
+      <Label layoutX="117.0" layoutY="54.0" text="Наименование:" />
+      <Label layoutX="118.0" layoutY="119.0" text="Группа:" />
+      <Label layoutX="117.0" layoutY="186.0" text="Цена:" />
+      <Button fx:id="confirmButton" disable="true" layoutX="136.0" layoutY="275.0" mnemonicParsing="false" onAction="#confirmAction" text="Ок" />
+      <Button fx:id="cancelButton" layoutX="201.0" layoutY="275.0" mnemonicParsing="false" onAction="#cancelAction" text="Отмена" />
+      <Pane fx:id="errorPane" prefHeight="38.0" prefWidth="400.0" style="-fx-background-color: rgb(236,78,74);" visible="false">
+         <children>
+            <Text fill="#eeeeee" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пример текста ошибки.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

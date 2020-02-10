@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" prefHeight="600.0" prefWidth="1000.0" stylesheets="@NavigationBarStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.screenController.HomeScreenController">
+   <top>
+      <HBox prefHeight="50.0" prefWidth="1000.0" styleClass="navigation-bar" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="storageTab" mnemonicParsing="false" styleClass="navigation-button" text="Склад">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="makeSupplyTab" mnemonicParsing="false" styleClass="navigation-button" text="Приход">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="makeSaleTab" mnemonicParsing="false" styleClass="navigation-button" text="Расход" />
+            <MenuButton mnemonicParsing="false" text="Статистика">
+               <items>
+                  <MenuItem fx:id="supplyStatsTab" mnemonicParsing="false" text="Приход" />
+                  <MenuItem fx:id="saleStatsTab" mnemonicParsing="false" text="Расход" />
+               </items>
+            </MenuButton>
+            <Button fx:id="contractorsTab" mnemonicParsing="false" styleClass="navigation-button" text="Контрагенты" />
+            <Button fx:id="productsTab" mnemonicParsing="false" styleClass="navigation-button" text="Товары" />
+            <Button fx:id="profileTab" mnemonicParsing="false" styleClass="navigation-button" text="Профиль" />
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="errorPane" prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: rgb(236,78,74);" visible="false">
+               <children>
+                  <Text fill="#eeeeee" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пример текста ошибки.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="approvePane" prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: rgb(70, 193, 42);" visible="false">
+               <children>
+                  <Text fill="#eeeeee" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пример текста ошибки.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

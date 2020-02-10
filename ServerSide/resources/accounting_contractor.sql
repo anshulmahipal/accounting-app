@@ -1,0 +1,5 @@
+INSERT INTO accounting.contractor (contractorID, contractorType, contractorName, contractorPhone, contractorRequisites, contractorAdress) VALUES (5, 'Клиент', 'ОАО "Белгазпромбанк"', '172895565', 'р/с 9005677812345', '220025 г.Минск');
+INSERT INTO accounting.contractor (contractorID, contractorType, contractorName, contractorPhone, contractorRequisites, contractorAdress) VALUES (9, 'Клиент', 'ОАО "Звезды"', '179804565', 'р/с 9990008761232', '220021 г.Минск');
+INSERT INTO accounting.contractor (contractorID, contractorType, contractorName, contractorPhone, contractorRequisites, contractorAdress) VALUES (11, 'Клиент', 'ИП "Иванчук"', '293142819', 'р/с 1231234564561', '220020 г.Минск');
+INSERT INTO accounting.contractor (contractorID, contractorType, contractorName, contractorPhone, contractorRequisites, contractorAdress) VALUES (16, 'Поставщик', 'ОАО "Товары"', '293456789', 'р/с 1111111111111', '220025 г.Минск');
+INSERT INTO accounting.contractor (contractorID, contractorType, contractorName, contractorPhone, contractorRequisites, contractorAdress) VALUES (17, 'Поставщик', 'УП "Сталь"', '293569080', 'р/с 2345672345671', '220020 г.Минск');
